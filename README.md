@@ -7,15 +7,17 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#orgf616500)
-2.  [org-img-link  allows for associating any link to an image.](#org2a4b041)
-    1.  [img-link Syntax](#org424a035)
-    2.  [Installation](#orgb5cf239)
-    3.  [Usage](#org40bded0)
-    4.  [Origin And Status](#orga031364)
-    5.  [Known problems:](#orge34c338)
-    6.  [Evolution Plans:](#orgc88e5a2)
-3.  [Maintenance And Support](#orgd69f3aa)
+1.  [org-img-link:](#org67ad743)
+2.  [org-img-link  allows for associating any link to an image.](#orge4c45f1)
+    1.  [img-link Syntax](#orgd37b367)
+3.  [The Problem &#x2013; Image Links Don't Work](#orgc5e7ae4)
+4.  [Usage](#org77b8eb0)
+5.  [Installation](#org5af302b)
+6.  [Examples](#org33d410a)
+7.  [Origin And Status](#orga41c55e)
+8.  [Known problems:](#org5dbf823)
+9.  [Evolution Plans:](#org6351a0e)
+10. [Maintenance And Support](#orgeed2c33)
 
 
 # org-img-link  allows for associating any link to an image.
@@ -44,15 +46,26 @@ An example would then be:
     [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg][http://www.by-star.net]]
 
 
-## Installation
+# The Problem &#x2013; Image Links Don't Work
 
-You can initialize this package as:
+According To:
 
-    (require 'org-img-link)
-    (xtn:org-add-link-type:img-link/activate)
+<https://github.com/fniessen/refcard-org-mode/blob/master/README.org>
+
+Image links
+
+To get image links, put a link to a file in the description.
+
+Clicking on the image
+
+    [[http://orgmode.org/][file:images/org-mode-unicorn.png]]
+
+leads to the Org mode home page.
+
+But that syntax DOES NOT WORK &#x2013; in org-version = 9.1.9 emacs 27.0.5.
 
 
-## Usage
+# Usage
 
 You can then use it by:
 
@@ -60,7 +73,20 @@ You can then use it by:
     (img-link-clear-overlays)    ;; to go back to seeing it as text.
 
 
-## Origin And Status
+# Installation
+
+You can initialize this package as:
+
+    (require 'org-img-link)
+    (xtn:org-add-link-type:img-link/activate)
+
+
+# Examples
+
+See <./org-img-link-example.md> for a set of examples.
+
+
+# Origin And Status
 
 Much of this code has been lifted from John Kitchn.
 
@@ -70,16 +96,16 @@ proper. We hope that the equivalent code be incorporated in org-mode
 distribution.
 
 
-## Known problems:
+# Known problems:
 
 
 ### The syntax is backwards, instead of:
 
-[ [ link-destination ] [ link-description-img ] ]
+    [[link-destination][link-description-img]]
 
 we have 
 
-[ [ img-link link-description-img ] [ link-destination ] ]
+    [[img-link:link-description-img][link-destination]]
 
 
 ### Hovering over the image of the link we get the link-description-img
@@ -97,7 +123,7 @@ and not the link-destination.
 ### A bad img-link throws and error and stops other good img-links to be displayed.
 
 
-## Evolution Plans:
+# Evolution Plans:
 
 
 ### TODO The backwardsness can easily be fixed

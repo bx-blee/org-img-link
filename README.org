@@ -38,15 +38,6 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 
 
-
-** Installation
-
-  You can initialize this package as:
-#+BEGIN_SRC emacs-lisp
-     (require 'org-img-link)
-     (xtn:org-add-link-type:img-link/activate)
-#+END_SRC
-
 * The Problem -- Image Links Don't Work
 
 According To:
@@ -74,6 +65,18 @@ But that syntax DOES NOT WORK -- in org-version = 9.1.9 emacs 27.0.5.
         (img-link-overlays)          ;; to activate it and 
 	(img-link-clear-overlays)    ;; to go back to seeing it as text.
 #+END_SRC
+
+* Installation
+
+  You can initialize this package as:
+#+BEGIN_SRC emacs-lisp
+     (require 'org-img-link)
+     (xtn:org-add-link-type:img-link/activate)
+#+END_SRC
+
+* Examples
+
+See [[file:./org-img-link-example.org]] for a set of examples.
 
 
 * Origin And Status
