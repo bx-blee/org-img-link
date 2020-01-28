@@ -47,7 +47,27 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
      (xtn:org-add-link-type:img-link/activate)
 #+END_SRC
 
-** Usage
+* The Problem -- Image Links Don't Work
+
+According To:
+
+https://github.com/fniessen/refcard-org-mode/blob/master/README.org
+
+Image links
+
+To get image links, put a link to a file in the description.
+
+Clicking on the image
+#+begin_example
+ [[http://orgmode.org/][file:images/org-mode-unicorn.png]]
+#+end_example
+leads to the Org mode home page.
+
+But that syntax DOES NOT WORK -- in org-version = 9.1.9 emacs 27.0.5.
+# (insert (org-version))
+
+
+* Usage
 
   You can then use it by:
 #+BEGIN_SRC emacs-lisp
@@ -56,7 +76,7 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 #+END_SRC
 
 
-** Origin And Status
+* Origin And Status
 
   Much of this code has been lifted from John Kitchn.
 
@@ -65,15 +85,17 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
   proper. We hope that the equivalent code be incorporated in org-mode
   distribution.
 
-** Known problems:
+* Known problems:
 
 *** The syntax is backwards, instead of:
-    
-    [ [ link-destination ] [ link-description-img ] ]
-    
+   
+#+begin_example 
+    [[link-destination][link-description-img]]
+#+end_example
     we have 
-
-    [ [ img-link link-description-img ] [ link-destination ] ]
+#+begin_example
+    [[img-link:link-description-img][link-destination]]
+#+end_example
 
 *** Hovering over the image of the link we get the link-description-img   
     and not the link-destination.
@@ -88,7 +110,7 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 *** A bad img-link throws and error and stops other good img-links to be displayed.
 
 
-** Evolution Plans:
+* Evolution Plans:
 
 *** TODO The backwardsness can easily be fixed 
     in xtn:org-add-link-type:img-link :path/proc
