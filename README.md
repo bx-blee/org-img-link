@@ -7,14 +7,14 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#orgf9e69cf)
-2.  [org-img-link  allows for associating any link to an image.](#org82d392a)
-    1.  [img-link Syntax](#orgce68ac0)
-    2.  [Installation](#orgbe85077)
-    3.  [Usage](#org9c76834)
-    4.  [Origin And Status](#org7a5de86)
-    5.  [Known problems:](#org4d8d89a)
-    6.  [Evolution Plans:](#org15a6dfc)
+1.  [org-img-link:](#org080b0eb)
+2.  [org-img-link  allows for associating any link to an image.](#org6ebb069)
+    1.  [img-link Syntax](#org8331cca)
+    2.  [Installation](#orga2b5d48)
+    3.  [Usage](#orga76446f)
+    4.  [Origin And Status](#orgd0d8349)
+    5.  [Known problems:](#orgf010933)
+    6.  [Evolution Plans:](#org3d6a127)
 
 
 # org-img-link  allows for associating any link to an image.
@@ -39,15 +39,16 @@ We would then use it like this:
 An example would then be:
 
     [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.by-star.net]]
-
-[http://www.by-star.net](https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg)
+    
+    [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg][http://www.by-star.net]]
 
 
 ## Installation
 
 You can initialize this package as:
-   (require 'org-img-link)
-   (xtn:org-add-link-type:img-link/activate)
+
+    (require 'org-img-link)
+    (xtn:org-add-link-type:img-link/activate)
 
 
 ## Usage
@@ -87,9 +88,9 @@ and not the link-destination.
 
 ### The display is controlled by
 
-(img-link-overlays) and (img-link-clear-overlays)
-instead of the native 
-(org-toggle-inline-images) and (org-display-inline-images t)
+    (img-link-overlays) and (img-link-clear-overlays)
+    instead of the native 
+    (org-toggle-inline-images) and (org-display-inline-images t)
 
 
 ### A bad img-link throws and error and stops other good img-links to be displayed.

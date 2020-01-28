@@ -1,8 +1,21 @@
 ;;; -*- Mode: Emacs-Lisp; -*-
 
 (lambda () "
-;;;#+BEGIN: bx:dblock:global:file-insert-cond :cond "./blee.el" :file "org-img-link-readme.org"
+;;;#+BEGIN: bx:dblock:global:file-insert-cond :cond "./blee.el" :file "README.org"
+#+TITLE: org-img-link
+#+description: Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote).
+#+date: 2020:01:27
+#+OPTIONS: toc:nil
+
+
+* org-img-link:
+
+Extensions to Emacs org-mode to allow for associating any destination link with a local or remote image.
+
+#+TOC: headlines 2 
+
 * org-img-link  allows for associating any link to an image.
+
   The obvious natural way to do this with org links would have been:
 
   [ [ link-destination ] [ link-description ] ]
@@ -21,21 +34,31 @@
   [ [ img-link: img-path ] [ link-destination ] ] 
   An example would then be:
 
+#+begin_example
   [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.by-star.net]]
 
   [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg][http://www.by-star.net]]
+#+end_example
+
+
+
 
 ** Installation
 
   You can initialize this package as:
+#+BEGIN_SRC emacs-lisp
      (require 'org-img-link)
-     (xtn:org:link:img-link/activate)
+     (xtn:org-add-link-type:img-link/activate)
+#+END_SRC
 
 ** Usage
 
   You can then use it by:
-        (img-link-overlays)          -- to activate it and 
-	(img-link-clear-overlays)    -- to go back to seeing it as text.
+#+BEGIN_SRC emacs-lisp
+        (img-link-overlays)          ;; to activate it and 
+	(img-link-clear-overlays)    ;; to go back to seeing it as text.
+#+END_SRC
+
 
 ** Origin And Status
 
@@ -60,15 +83,19 @@
     and not the link-destination.
 
 *** The display is controlled by 
+#+BEGIN_SRC emacs-lisp
     (img-link-overlays) and (img-link-clear-overlays)
     instead of the native 
     (org-toggle-inline-images) and (org-display-inline-images t)
+#+END_SRC
 
 *** A bad img-link throws and error and stops other good img-links to be displayed.
+
+
 ** Evolution Plans:
 
 *** TODO The backwardsness can easily be fixed 
-    in xtn:org:link:img-link :path/proc
+    in xtn:org-add-link-type:img-link :path/proc
     but img-link-overlays may be harder to fix. 
     Need to see if xtn:org:link:description/get-at-point
     can be used there.
@@ -86,7 +113,11 @@
     <a href="https://www.w3schools.com"> <img
     border="0" alt="W3Schools" src="logo_w3s.gif" width="100"
     height="100"> </a>
-    This is all unrelated to org-exporting.
+
+    The link context that we are speaking of is that of the native
+    org-link and is unrelated to org-exporting.
+
+
 
 ;;;#+END:
 ")
