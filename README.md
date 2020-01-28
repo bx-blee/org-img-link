@@ -7,43 +7,17 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#org67ad743)
-2.  [org-img-link  allows for associating any link to an image.](#orge4c45f1)
-    1.  [img-link Syntax](#orgd37b367)
-3.  [The Problem &#x2013; Image Links Don't Work](#orgc5e7ae4)
-4.  [Usage](#org77b8eb0)
-5.  [Installation](#org5af302b)
-6.  [Examples](#org33d410a)
-7.  [Origin And Status](#orga41c55e)
-8.  [Known problems:](#org5dbf823)
-9.  [Evolution Plans:](#org6351a0e)
-10. [Maintenance And Support](#orgeed2c33)
-
-
-# org-img-link  allows for associating any link to an image.
-
-The obvious natural way to do this with org links would have been:
-
-[ [ link-destination ] [ link-description ] ]
-
-And when link description had been a file specification or a url
-pointing to an image, the description would have become the image
-that you would click to get to link-destination.
-
-But even with the latest org-mode (org-mode 9.1), this does not work for me.
-
-
-## img-link Syntax
-
-As a work around, we are creating a new org-link-type called:
-"img-link". 
-We would then use it like this:
-[ [ img-link: img-path ] [ link-destination ] ] 
-An example would then be:
-
-    [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.by-star.net]]
-    
-    [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg][http://www.by-star.net]]
+1.  [org-img-link:](#orgef70c0e)
+2.  [The Problem &#x2013; Image Links Don't Work](#orgcea5196)
+3.  [org-img-link  allows for associating any link to an image.](#orgdeb6f7c)
+4.  [img-link Syntax](#orgdd4ee5a)
+5.  [Installation](#org85f4396)
+6.  [Usage](#orge35b57c)
+7.  [Examples](#orgea60f10)
+8.  [Origin And Status](#org3d4176c)
+9.  [Known problems:](#orgfe7d2eb)
+10. [Evolution Plans:](#orge6ceee4)
+11. [Maintenance And Support](#org73b061a)
 
 
 # The Problem &#x2013; Image Links Don't Work
@@ -62,15 +36,36 @@ Clicking on the image
 
 leads to the Org mode home page.
 
-But that syntax DOES NOT WORK &#x2013; in org-version = 9.1.9 emacs 27.0.5.
+But that syntax DOES NOT WORK for me &#x2013; in org-version = 9.1.9 emacs 27.0.5.
 
 
-# Usage
+# org-img-link  allows for associating any link to an image.
 
-You can then use it by:
+The obvious natural way to do this with org links would have been:
 
-    (img-link-overlays)          ;; to activate it and 
-    (img-link-clear-overlays)    ;; to go back to seeing it as text.
+[ [ link-destination ] [ link-description ] ]
+
+And when link description had been a file specification or a url
+pointing to an image, the description would have become the image
+that you would click to get to link-destination.
+
+
+# img-link Syntax
+
+As a work around, we are creating a new org-link-type called:
+"img-link". 
+We would then use it like this:
+
+    [[img-link:img-path][link-destination]] 
+
+An example would then be:
+
+    [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.by-star.net]]
+    
+    [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg][http://www.by-star.net]]
+
+Notice that this link syntax is backwards with respect to the usual org-mode link syntax.
+This is due to implementation convenience.
 
 
 # Installation
@@ -79,6 +74,14 @@ You can initialize this package as:
 
     (require 'org-img-link)
     (xtn:org-add-link-type:img-link/activate)
+
+
+# Usage
+
+You can then use it by:
+
+    (img-link-overlays)          ;; to activate it and 
+    (img-link-clear-overlays)    ;; to go back to seeing it as text.
 
 
 # Examples
