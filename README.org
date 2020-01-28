@@ -3,9 +3,11 @@
 #+date: 2020:01:27
 #+OPTIONS: toc:nil
 
-org-img-link
+#+begin_center
+~org-img-link~
+#+end_center
 
-* Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote)
+Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote)
 
 #+TOC: headlines 2 
 
