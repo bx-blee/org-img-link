@@ -16,7 +16,7 @@ According To:
 
 https://github.com/fniessen/refcard-org-mode/blob/master/README.org
 
-Image links
+/Image links/
 
 To get image links, put a link to a file in the description.
 

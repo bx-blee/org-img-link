@@ -7,17 +7,17 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#orgef70c0e)
-2.  [The Problem &#x2013; Image Links Don't Work](#orgcea5196)
-3.  [org-img-link  allows for associating any link to an image.](#orgdeb6f7c)
-4.  [img-link Syntax](#orgdd4ee5a)
-5.  [Installation](#org85f4396)
-6.  [Usage](#orge35b57c)
-7.  [Examples](#orgea60f10)
-8.  [Origin And Status](#org3d4176c)
-9.  [Known problems:](#orgfe7d2eb)
-10. [Evolution Plans:](#orge6ceee4)
-11. [Maintenance And Support](#org73b061a)
+1.  [org-img-link:](#orgc50196d)
+2.  [The Problem &#x2013; Image Links Don't Work](#orge1e9bc5)
+3.  [org-img-link  allows for associating any link to an image.](#orgc91eb29)
+4.  [img-link Syntax](#orgc0c614c)
+5.  [Installation](#org279c865)
+6.  [Usage](#orgce6920d)
+7.  [Examples](#orgfb35c4d)
+8.  [Origin And Status](#org8719010)
+9.  [Known problems:](#orgff912db)
+10. [Evolution Plans:](#org562510e)
+11. [Maintenance And Support](#org268fbd7)
 
 
 # The Problem &#x2013; Image Links Don't Work
@@ -26,7 +26,7 @@ According To:
 
 <https://github.com/fniessen/refcard-org-mode/blob/master/README.org>
 
-Image links
+*Image links*
 
 To get image links, put a link to a file in the description.
 
