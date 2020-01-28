@@ -7,14 +7,15 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#org580487d)
-2.  [org-img-link  allows for associating any link to an image.](#org604d57f)
-    1.  [img-link Syntax](#org906188a)
-    2.  [Installation](#org8187f37)
-    3.  [Usage](#org80ff96b)
-    4.  [Origin And Status](#org04f01ef)
-    5.  [Known problems:](#orgb61d781)
-    6.  [Evolution Plans:](#orgbf6acaf)
+1.  [org-img-link:](#orgf616500)
+2.  [org-img-link  allows for associating any link to an image.](#org2a4b041)
+    1.  [img-link Syntax](#org424a035)
+    2.  [Installation](#orgb5cf239)
+    3.  [Usage](#org40bded0)
+    4.  [Origin And Status](#orga031364)
+    5.  [Known problems:](#orge34c338)
+    6.  [Evolution Plans:](#orgc88e5a2)
+3.  [Maintenance And Support](#orgd69f3aa)
 
 
 # org-img-link  allows for associating any link to an image.
@@ -127,4 +128,9 @@ image as a link is something like:
 
 The link context that we are speaking of is that of the native
 org-link and is unrelated to org-exporting.
+
+
+# Maintenance And Support
+
+Mohsen BANAN &#x2013; <http://mohsen.1.banan.byname.net/contact>
 

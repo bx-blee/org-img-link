@@ -116,4 +116,7 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
     org-link and is unrelated to org-exporting.
 
 
+* Maintenance And Support
+
+  Mohsen BANAN -- http://mohsen.1.banan.byname.net/contact
 
