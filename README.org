@@ -106,9 +106,11 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
     which a link syntax would be at least as rich of html.  html link
     syntax sees img as an integral part of the syntax.  For example An
     image as a link is something like:
+#+begin_example
     <a href="https://www.w3schools.com"> <img
     border="0" alt="W3Schools" src="logo_w3s.gif" width="100"
     height="100"> </a>
+#+end_example
 
     The link context that we are speaking of is that of the native
     org-link and is unrelated to org-exporting.

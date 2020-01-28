@@ -7,14 +7,14 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#org080b0eb)
-2.  [org-img-link  allows for associating any link to an image.](#org6ebb069)
-    1.  [img-link Syntax](#org8331cca)
-    2.  [Installation](#orga2b5d48)
-    3.  [Usage](#orga76446f)
-    4.  [Origin And Status](#orgd0d8349)
-    5.  [Known problems:](#orgf010933)
-    6.  [Evolution Plans:](#org3d6a127)
+1.  [org-img-link:](#org580487d)
+2.  [org-img-link  allows for associating any link to an image.](#org604d57f)
+    1.  [img-link Syntax](#org906188a)
+    2.  [Installation](#org8187f37)
+    3.  [Usage](#org80ff96b)
+    4.  [Origin And Status](#org04f01ef)
+    5.  [Known problems:](#orgb61d781)
+    6.  [Evolution Plans:](#orgbf6acaf)
 
 
 # org-img-link  allows for associating any link to an image.
@@ -120,9 +120,10 @@ of "Emacs Mark-Up Language" (EML) &#x2013; a parallel to html5 &#x2013; in
 which a link syntax would be at least as rich of html.  html link
 syntax sees img as an integral part of the syntax.  For example An
 image as a link is something like:
-<a href="<https://www.w3schools.com>"> <img
-border="0" alt="W3Schools" src="logo<sub>w3s.gif</sub>" width="100"
-height="100"> </a>
+
+    <a href="https://www.w3schools.com"> <img
+    border="0" alt="W3Schools" src="logo_w3s.gif" width="100"
+    height="100"> </a>
 
 The link context that we are speaking of is that of the native
 org-link and is unrelated to org-exporting.
