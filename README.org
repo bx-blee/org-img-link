@@ -1,6 +1,13 @@
-#+title: org-img-link
-
+#+TITLE: org-img-link
 #+description: Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote).
+#+date: 2020:01:27
+#+OPTIONS: toc:nil
+
+org-img-link
+
+* Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote)
+
+#+TOC: headlines 2 
 
 * org-img-link  allows for associating any link to an image.
   The obvious natural way to do this with org links would have been:
@@ -91,4 +98,6 @@
 
     The link context that we are speaking of is that of the native
     org-link and is unrelated to org-exporting.
+
+
 
