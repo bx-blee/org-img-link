@@ -2,19 +2,19 @@
 
 # org-img-link:
 
-Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote)
+Extensions to Emacs org-mode to allow for associating any destination link with a local or remote image.
 
 
 # Table of Contents
 
-1.  [org-img-link:](#org2bb665a)
-2.  [org-img-link  allows for associating any link to an image.](#orgb165fe2)
-    1.  [img-link Syntax](#org3d6ed35)
-    2.  [Installation](#org40a8b2b)
-    3.  [Usage](#org7fb7c07)
-    4.  [Origin And Status](#org43da77a)
-    5.  [Known problems:](#org7ba71bb)
-    6.  [Evolution Plans:](#orga3fcc87)
+1.  [org-img-link:](#orgf9e69cf)
+2.  [org-img-link  allows for associating any link to an image.](#org82d392a)
+    1.  [img-link Syntax](#orgce68ac0)
+    2.  [Installation](#orgbe85077)
+    3.  [Usage](#org9c76834)
+    4.  [Origin And Status](#org7a5de86)
+    5.  [Known problems:](#org4d8d89a)
+    6.  [Evolution Plans:](#org15a6dfc)
 
 
 # org-img-link  allows for associating any link to an image.
@@ -38,7 +38,7 @@ We would then use it like this:
 [ [ img-link: img-path ] [ link-destination ] ] 
 An example would then be:
 
-[http://www.by-star.net](file:/bisos//blee/env/images/signup.jpg)
+    [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.by-star.net]]
 
 [http://www.by-star.net](https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg)
 
@@ -53,8 +53,9 @@ You can initialize this package as:
 ## Usage
 
 You can then use it by:
-      (img-link-overlays)          &#x2013; to activate it and 
-      (img-link-clear-overlays)    &#x2013; to go back to seeing it as text.
+
+    (img-link-overlays)          ;; to activate it and 
+    (img-link-clear-overlays)    ;; to go back to seeing it as text.
 
 
 ## Origin And Status
