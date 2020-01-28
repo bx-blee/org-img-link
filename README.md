@@ -7,20 +7,20 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#orgc50196d)
-2.  [The Problem &#x2013; Image Links Don't Work](#orge1e9bc5)
-3.  [org-img-link  allows for associating any link to an image.](#orgc91eb29)
-4.  [img-link Syntax](#orgc0c614c)
-5.  [Installation](#org279c865)
-6.  [Usage](#orgce6920d)
-7.  [Examples](#orgfb35c4d)
-8.  [Origin And Status](#org8719010)
-9.  [Known problems:](#orgff912db)
-10. [Evolution Plans:](#org562510e)
-11. [Maintenance And Support](#org268fbd7)
+1.  [org-img-link:](#orge7c24e1)
+2.  [The Problem &#x2013; Image Links Don't Work As Described](#org5161146)
+3.  [org-img-link  allows for associating any link to an image.](#orgadb1f21)
+4.  [img-link Syntax](#org5defb31)
+5.  [Installation](#orgfa7674e)
+6.  [Usage](#org876dfe6)
+7.  [Examples](#org32ed6b6)
+8.  [Origin And Status](#org1a2b90a)
+9.  [Known problems:](#org1486ab1)
+10. [Evolution Plans:](#orgbe304fe)
+11. [Maintenance And Support](#org984d558)
 
 
-# The Problem &#x2013; Image Links Don't Work
+# The Problem &#x2013; Image Links Don't Work As Described
 
 According To:
 
@@ -36,7 +36,7 @@ Clicking on the image
 
 leads to the Org mode home page.
 
-But that syntax DOES NOT WORK for me &#x2013; in org-version = 9.1.9 emacs 27.0.5.
+But that syntax DOES NOT WORK for me &#x2013; in org-version = 9.1.9 emacs 27.0.5 and emacs 26.2.
 
 
 # org-img-link  allows for associating any link to an image.

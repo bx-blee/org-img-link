@@ -10,7 +10,7 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 #+TOC: headlines 2 
 
-* The Problem -- Image Links Don't Work
+* The Problem -- Image Links Don't Work As Described
 
 According To:
 
@@ -26,7 +26,7 @@ Clicking on the image
 #+end_example
 leads to the Org mode home page.
 
-But that syntax DOES NOT WORK for me -- in org-version = 9.1.9 emacs 27.0.5.
+But that syntax DOES NOT WORK for me -- in org-version = 9.1.9 emacs 27.0.5 and emacs 26.2.
 # (insert (org-version))
 
 
