@@ -1,0 +1,15 @@
+
+(org-display-inline-images t)
+(org-toggle-inline-images)
+
+(require 'org-img-link)
+
+(xtn:org-add-link-type:img-link/activate)
+
+* [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]     some Text   [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
+
+** [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
+
+(img-link-overlays)
+
+(img-link-clear-overlays)
