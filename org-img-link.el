@@ -177,38 +177,32 @@ See [[file:./org-img-link-example.org]] for a set of examples.
   (let (
 	($linkDesc (xtn:org:link:description/get-at-point))
 	)
-    ;;(org-end-of-line)
-    ;;(insert (format "--Path is %s == desc is %s" @path $linkDesc))
-    (org-open-link-from-string $linkDesc)
+    (when $linkDesc
+      (org-open-link-from-string $linkDesc)
+      )
     )
   )
 
 
 (defun xtn:org:link:description/get-at-point ()
-  (let (
+  (let* (
 	($link (org-element-context))
+	($begin (org-element-property :contents-begin $link))
+	($end (org-element-property :contents-end $link))
+	($result)
 	)
-    (buffer-substring (org-element-property :contents-begin $link)
-                      (org-element-property :contents-end $link))
+    (unless (and $begin $end)
+      (setq $result nil))
+    (when (and $begin $end)
+      (setq $result (buffer-substring $begin $end)))
+    $result
     )
   )
 
 
 (lambda () "
-* Original code from John Kitchn
+* Original code from John Kitchn -- See ./image-url-john.el
 ")
-
-;; (org-add-link-type
-;;  "image-url"
-;;  (lambda (path)
-;;    (let ((img (expand-file-name
-;;            (concat (md5 path) "." (file-name-extension path))
-;;            temporary-file-directory)))
-;;      (if (file-exists-p img)
-;;      (find-file img)
-;;        (url-copy-file path img)
-;;        (find-file img)))))
-
 
 
 (defun img-link-overlays ()
@@ -221,13 +215,20 @@ See [[file:./org-img-link-example.org]] for a set of examples.
     do
     (let* ((path (org-element-property :path img-link))
            (ov (make-overlay (org-element-property :begin img-link)
-                 (org-element-property :end img-link)))
-           (img (create-image (expand-file-name
-                   (concat (md5 path)
-			   "."
-                       (file-name-extension
-                        path))
-                   temporary-file-directory))))
+			     (org-element-property :end img-link)))
+	   (tmp-file-path (expand-file-name
+			   (concat (md5 path)
+				   "."
+				   (file-name-extension
+				    path))
+			   temporary-file-directory))
+           (img)
+	   )
+      (unless (file-exists-p tmp-file-path)
+	(url-copy-file path tmp-file-path)
+	)
+      (setq img (create-image tmp-file-path))
+      (message (format "path=%s fileName=%s" path tmp-file-path))
       (overlay-put ov 'display img)
       (overlay-put ov 'img-link t))))
 
