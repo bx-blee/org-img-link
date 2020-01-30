@@ -20,7 +20,7 @@
 (xtn:org-add-link-type:img-link/activate)
 
 * Inline-images examples
-** [[file:/bisos//blee/env/images/signup.jpg]]
+** [[file:/bisos//blee/env/images/signup.jpg][
 
 #+begin_example
  [[file:/bisos//blee/env/images/signup.jpg]]
@@ -29,14 +29,14 @@
 #+begin_example
  [[http://www.neda.com][file:/bisos//blee/env/images/signup.jpg]]
 #+end_example
- [[http://www.neda.com][file:/bisos//blee/env/images/signup.jpg]]
+ [[http://www.neda.com][file:/bisos/blee/env/images/signup.jpg]]
 
  [[file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]
 #+begin_example
  [[file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]
 #+end_example
 
-* [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]     some Text     [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
+* [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]     some Text      [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
 
 ** [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
 
