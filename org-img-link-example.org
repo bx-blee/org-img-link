@@ -1,3 +1,61 @@
+#+TITLE: Examples Of img-link 
+#+description: Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote).
+#+date: 2020:01:27
+#+author: Mohsen BANAN, http://mohsen.banan.1.byname.net/contact
+
+
+In ./inlineimages-example.org we show how 
+
+#+begin_example
+ [[http://orgmode.org/][file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+#+end_example
+
+does not work.
+
+With img-link we provide a workaround.
+
+First you should eval 
+
+(require 'org-img-link)
+
+(xtn:org-add-link-type:img-link/activate)
+
+Then you can use img-link.
+
+To compare, here is a non-working 
+inlineimage with a link to  http://orgmode.org/
+
+[[http://orgmode.org/][file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+
+And here is a working inlineimage without a link:
+
+[[file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+
+
+That non-working inlineimage with a link to  http://orgmode.org/
+can then become:
+
+#+begin_example
+ [[img-link:file:/usr/share/gimp/2.0/scripts/images/texture.jpg][http://orgmode.org/]]
+#+end_example
+
+ [[img-link:file:/usr/share/gimp/2.0/scripts/images/texture.jpg][http://orgmode.org/]]
+
+
+Which works but the tooltip show the link to image and not the destination.
+
+The img-link has the additional feature of allowing the 
+image to be url instead of a file.
+
+For example: 
+
+#+begin_example
+[[img-link:http://www.neda.com/images/neda.jpg][http://www.neda.com]]
+#+end_example
+
+[[img-link:http://www.neda.com/images/neda.jpg][http://www.neda.com]]
+
+=And Here Are Some Ways Of Controlling Image Display=
 
 (org-display-inline-images t)
 (org-display-inline-images nil)
@@ -12,53 +70,16 @@
 
 (setq org-inline-image-overlays nil)
 
-(org-display-inline-images nil)
-(org-display-inline-images t)
-
-(require 'org-img-link)
-
-(xtn:org-add-link-type:img-link/activate)
-
-* Inline-images examples
-** [[file:/bisos//blee/env/images/signup.jpg][
-
-#+begin_example
- [[file:/bisos//blee/env/images/signup.jpg]]
-#+end_example
-
-#+begin_example
- [[http://www.neda.com][file:/bisos//blee/env/images/signup.jpg]]
-#+end_example
- [[http://www.neda.com][file:/bisos/blee/env/images/signup.jpg]]
-
- [[file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]
-#+begin_example
- [[file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]
-#+end_example
-
-* [[img-link:file:/bisos//blee/env/images/signup.jpg][http://www.neda.com]]     some Text      [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
-
-** [[img-link:file:/bisos//blee/env/images/signup.jpg][bbdb:mohsen]]
-
 (img-link-overlays)
 
 (img-link-clear-overlays)
 
-
-
-;; Then use it like this: [[img-link:https://d1ra4hr810e003.cloudfront.net/media/27FB7F0C-9885-42A6-9E0C19C35242B5AC/0/D968A2D0-35B8-41C6-A94A0C5C5FCA0725/F0E9E3EC-8F99-4ED8-A40DADEAF7A011A5/dbe669e9-40be-51c9-a9a0-001b0e022be7/thul-IMG_2100.jpg]]
-
-
-[[img-link:http://www.neda.com/images/neda.jpg][http://www.neda.com]]
-
-[[img-link:http://www.neda.com/images/neda.jpg]]
-
-*  [[elisp:(org-cycle)][+-]] Org-Mode Parameters:
+Org-Mode Parameters:
 #+STARTUP: showall
 #+STARTUP: lognotestate
 #+STARTUP: inlineimages
 
-*  [[elisp:(org-cycle)][+-]] Emacs Parameters:
+Emacs Parameters:
 # Local Variables:
 # eval: (img-link-overlays)
 # End:

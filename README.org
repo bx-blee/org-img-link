@@ -1,6 +1,7 @@
 #+TITLE: org-img-link
 #+description: Extensions To Emacs org-mode to allow for associating any destination link with an image (local or remote).
 #+date: 2020:01:27
+#+author: Mohsen BANAN, http://mohsen.banan.1.byname.net/contact
 #+OPTIONS: toc:nil
 
 
@@ -29,6 +30,7 @@ leads to the Org mode home page.
 But that syntax DOES NOT WORK for me -- in org-version = 9.1.9 emacs 27.0.5 and emacs 26.2.
 # (insert (org-version))
 
+See ./inlineimages-example.org for examples of this.
 
 * org-img-link  allows for associating any link to an image.
 

@@ -1,0 +1,66 @@
+#+TITLE: Examples For org-mode inlineimages Bug 
+#+description: Examples that illustrate inlineimages bug in org-mode
+#+date: 2020:01:27
+#+author: Mohsen BANAN, http://mohsen.banan.1.byname.net/contact
+
+Here are some examples that illustrate aspects of 
+org-mode inlineimage that do not work right.
+
+These point to possible bugs in org-mode proper.
+
+The image that we are using in this example is
+/usr/share/gimp/2.0/scripts/images/texture.jpg
+
+If you are missing that file just do the equivalent of 
+sudo apt install gimp
+
+According To:
+
+https://github.com/fniessen/refcard-org-mode/blob/master/README.org
+
+/Image links/
+
+To get image links, put a link to a file in the description.
+
+Clicking on the image
+
+#+begin_example
+ [[http://orgmode.org/][file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+#+end_example
+
+ Should lead to the Org mode home page.
+
+In our environment in org-version = 9.1.9 emacs 27.0.5 and emacs 26.2.
+
+with:
+
+[[http://orgmode.org/][file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+
+
+We don't see the image. We just see the text of link description 
+as a link.
+
+=Image as [ [ file: imagePath ] ]=
+
+#+begin_example
+ [[file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+#+end_example
+
+[[file:/usr/share/gimp/2.0/scripts/images/texture.jpg]]
+
+We do see the image. And clicking on it just produces the image again.
+
+You can enable inline-images with:
+
+(org-display-inline-images)
+
+and disbale them with 
+
+(org-remove-inline-images)
+or
+(org-toggle-inline-images)
+
+#+STARTUP: showall
+#+STARTUP: inlineimages
+
+

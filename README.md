@@ -7,17 +7,17 @@ Extensions to Emacs org-mode to allow for associating any destination link with 
 
 # Table of Contents
 
-1.  [org-img-link:](#orge7c24e1)
-2.  [The Problem &#x2013; Image Links Don't Work As Described](#org5161146)
-3.  [org-img-link  allows for associating any link to an image.](#orgadb1f21)
-4.  [img-link Syntax](#org5defb31)
-5.  [Installation](#orgfa7674e)
-6.  [Usage](#org876dfe6)
-7.  [Examples](#org32ed6b6)
-8.  [Origin And Status](#org1a2b90a)
-9.  [Known problems:](#org1486ab1)
-10. [Evolution Plans:](#orgbe304fe)
-11. [Maintenance And Support](#org984d558)
+1.  [org-img-link:](#org86d0ea9)
+2.  [The Problem &#x2013; Image Links Don't Work As Described](#orgf2472eb)
+3.  [org-img-link  allows for associating any link to an image.](#orgbe519b0)
+4.  [img-link Syntax](#org0c848d8)
+5.  [Installation](#org6bfcf19)
+6.  [Usage](#org434e143)
+7.  [Examples](#org4eddec2)
+8.  [Origin And Status](#orgd7e91aa)
+9.  [Known problems:](#orgf9f0e1d)
+10. [Evolution Plans:](#orgb0207e6)
+11. [Maintenance And Support](#orgc693ac6)
 
 
 # The Problem &#x2013; Image Links Don't Work As Described
@@ -37,6 +37,8 @@ Clicking on the image
 leads to the Org mode home page.
 
 But that syntax DOES NOT WORK for me &#x2013; in org-version = 9.1.9 emacs 27.0.5 and emacs 26.2.
+
+See ./inlineimages-example.org for examples of this.
 
 
 # org-img-link  allows for associating any link to an image.
